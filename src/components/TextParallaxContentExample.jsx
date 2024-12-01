@@ -141,7 +141,7 @@ const StickyImage = ({ imgUrl }) => {
     offset: ["end end", "end start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
@@ -171,7 +171,7 @@ const ImageWrapper = styled(motion.div)`
 const Overlay = styled(motion.div)`
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
 `;
 
 const OverlayCopy = ({ subheading, heading }) => {
@@ -289,18 +289,22 @@ const ContentText = styled.div`
 `;
 
 const ActionButton = styled(NavLink)`
-  width: 100%;
+  width: fit-content;
   padding: 0.75rem 2rem;
   font-size: 1rem;
   color: ${theme.white};
-  background-color: ${theme.main};
+  background: linear-gradient(120deg, ${theme.main}, ${theme.secondary});
   border: none;
   border-radius: 0.5rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  text-decoration: none; /* Ensures no underline */
+  text-decoration: none;
+  transition: all 0.4s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
   &:hover {
-    background-color: ${theme.secondary};
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   &:active {
@@ -308,6 +312,10 @@ const ActionButton = styled(NavLink)`
   }
 
   svg {
-    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(3px);
   }
 `;
