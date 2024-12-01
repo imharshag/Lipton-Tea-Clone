@@ -20,26 +20,24 @@ export const TextParallaxContentExample = () => {
   const sections = [
     {
       imgUrl:
-        "https://cdn.pixabay.com/photo/2017/05/19/07/34/teacup-2325722_1280.jpg",
+        "https://i.ytimg.com/vi/h39Xwf-lVGk/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AHUBoAC4AOKAgwIABABGGUgSChAMA8=&rs=AOn4CLBYvWTvpddv8CLOaq8JtUHxfld05Q",
       subheading: "Lipton",
       heading: "Enjoy the taste of the world's No.1 tea",
       content:
         "Discover the rich, aromatic flavors of the world’s No.1 tea, known for its unmatched quality and exquisite taste. Savor every sip of this premium blend for an exceptional tea experience.",
       learnMoreText: "Unmatched Flavor in Every Sip",
-      learnMoreLink: "/shop",
-      discoveryText: "Collaborate for the future",
-      linkcontent: "Shop With Us",
+      learnMoreLink: "https://en.wikipedia.org/wiki/Lipton",
+      linkcontent: "Learn More",
     },
     {
       imgUrl:
         "https://cdn.pixabay.com/photo/2016/03/05/23/02/teacup-1239437_960_720.jpg",
-      subheading: "Quality",
-      heading: "Never compromise.",
+      subheading: "Tea Store",
+      heading: "Don't knock it 'til you've tried it!",
       content:
-        "Quality is at the heart of everything we do. We never compromise on excellence.",
-      learnMoreText: "Learn More about Quality", // Dynamic text
+        "Shop with us for the finest teas, sourced with care and crafted for quality. Enjoy a seamless shopping experience and bring home the perfect brew.",
+      learnMoreText: "Shop. Sip. Savor.",
       learnMoreLink: "/shop",
-      discoveryText: "Our Tea Products", // Dynamic discovery text
       linkcontent: "Shop With Us",
     },
     {
@@ -50,7 +48,6 @@ export const TextParallaxContentExample = () => {
       content: "Stay ahead of trends with modern styles that make a statement.",
       learnMoreText: "Modern Styles", // Dynamic text
       learnMoreLink: "/modern",
-      discoveryText: "Style meets Modernity", // Dynamic discovery text
     },
     {
       imgUrl:
@@ -61,7 +58,6 @@ export const TextParallaxContentExample = () => {
         "Innovation drives us forward, inspiring new solutions and opportunities.",
       learnMoreText: "Innovate with Us", // Dynamic text
       learnMoreLink: "/innovation",
-      discoveryText: "Innovation in Action", // Dynamic discovery text
     },
     {
       imgUrl:
@@ -72,7 +68,6 @@ export const TextParallaxContentExample = () => {
         "Fuel your creativity with fresh ideas and endless possibilities.",
       learnMoreText: "Get Inspired", // Dynamic text
       learnMoreLink: "/inspiration",
-      discoveryText: "Inspiration Unleashed", // Dynamic discovery text
       linkcontent: "Hr",
     },
   ];
@@ -88,7 +83,6 @@ export const TextParallaxContentExample = () => {
           content={section.content}
           learnMoreText={section.learnMoreText} // Passing dynamic text
           learnMoreLink={section.learnMoreLink} // Passing link
-          discoveryText={section.discoveryText} // Passing dynamic discovery text
           linkcontent={section.linkcontent}
         >
           <ExampleContent
@@ -117,7 +111,6 @@ const TextParallaxContent = ({
   content,
   learnMoreLink,
   learnMoreText,
-  discoveryText,
   children,
 }) => {
   return (
@@ -127,7 +120,6 @@ const TextParallaxContent = ({
         <OverlayCopy heading={heading} subheading={subheading} />
       </ContentWrapper>
       {children}
-      <DiscoveryWrapper>{discoveryText}</DiscoveryWrapper>
     </Section>
   );
 };
@@ -217,6 +209,7 @@ const CopyWrapper = styled(motion.div)`
 `;
 
 const Subheading = styled.p`
+  color: --contrast;
   margin-bottom: 1rem;
   text-align: center;
   font-size: 1.25rem;
@@ -251,7 +244,7 @@ const ExampleContent = ({
     <HeadingWrapper>{learnMoreText}</HeadingWrapper>
     <ContentText>
       <p>{content}</p>
-      <ActionButton to={learnMoreLink}>
+      <ActionButton to={learnMoreLink} target="_blank">
         {linkcontent} <FiArrowUpRight />
       </ActionButton>
     </ContentText>
@@ -316,17 +309,5 @@ const ActionButton = styled(NavLink)`
 
   svg {
     margin-left: 0.5rem;
-  }
-`;
-
-const DiscoveryWrapper = styled.div`
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: ${theme.secondaryContrast};
-  text-align: center;
-  padding: 2rem 1rem;
-
-  @media (min-width: 768px) {
-    font-size: 1.5rem;
   }
 `;
