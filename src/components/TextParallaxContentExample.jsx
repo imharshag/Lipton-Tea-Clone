@@ -20,8 +20,8 @@ export const TextParallaxContentExample = () => {
   const sections = [
     {
       imgUrl:
-        "https://i.ytimg.com/vi/h39Xwf-lVGk/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AHUBoAC4AOKAgwIABABGGUgSChAMA8=&rs=AOn4CLBYvWTvpddv8CLOaq8JtUHxfld05Q",
-      subheading: "Lipton",
+        "https://cdn.pixabay.com/photo/2018/03/01/09/51/tea-3190241_1280.jpg",
+      subheading: "Lipton Tea",
       heading: "Enjoy the taste of the world's No.1 tea",
       content:
         "Discover the rich, aromatic flavors of the world’s No.1 tea, known for its unmatched quality and exquisite taste. Savor every sip of this premium blend for an exceptional tea experience.",
@@ -36,39 +36,53 @@ export const TextParallaxContentExample = () => {
       heading: "Don't knock it 'til you've tried it!",
       content:
         "Shop with us for the finest teas, sourced with care and crafted for quality. Enjoy a seamless shopping experience and bring home the perfect brew.",
-      learnMoreText: "Shop. Sip. Savor.",
+      learnMoreText: "Explore our exclusive collection",
       learnMoreLink: "/shop",
       linkcontent: "Shop With Us",
     },
     {
       imgUrl:
-        "https://cdn.pixabay.com/photo/2018/03/08/08/59/drink-3208144_1280.jpg",
-      subheading: "Modern",
+        "https://images.pexels.com/photos/8329266/pexels-photo-8329266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subheading: "Flavora",
       heading: "Dress for the best.",
-      content: "Stay ahead of trends with modern styles that make a statement.",
-      learnMoreText: "Modern Styles", // Dynamic text
-      learnMoreLink: "/modern",
+      content:
+        "Delight in Lipton's exquisite range of flavors, expertly crafted to provide a refreshing and satisfying taste in every sip, bringing you the perfect tea experience.",
+      learnMoreText: "Modern flavors, timeless refreshment",
+      learnMoreLink: "/shop",
+      linkcontent: "Discover",
+    },
+    {
+      imgUrl:
+        "https://images.pexels.com/photos/1298613/pexels-photo-1298613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      subheading: "Let's Go!",
+      heading: "Your Perfect Brew, Just a Click Away!.",
+      content:
+        "You're almost done! Review your cart, finalize your selections, and secure your order for a seamless shopping experience",
+      learnMoreText: "Cart’s waiting, grab it Now!",
+      learnMoreLink: "/cart",
+      linkcontent: "Check Out!",
     },
     {
       imgUrl:
         "https://images.pexels.com/photos/9795359/pexels-photo-9795359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       subheading: "Innovation",
-      heading: "Leading the way.",
+      heading: "Creating Value for All.",
       content:
-        "Innovation drives us forward, inspiring new solutions and opportunities.",
-      learnMoreText: "Innovate with Us", // Dynamic text
-      learnMoreLink: "/innovation",
+        "Our purpose, as the world’s largest tea company, is to create value for tea-loving consumers to workers in the fields and everyone in between. We are committed to delivering positive social and environmental impact throughout our supply chain and beyond.",
+      learnMoreText: "Unlocking tea's true value",
+      learnMoreLink: "https://github.com/imharshag",
+      linkcontent: "Github",
     },
     {
       imgUrl:
-        "https://cdn.pixabay.com/photo/2015/06/08/15/26/coffee-801786_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/02/24/07/54/moc-chau-tea-hills-2094184_1280.jpg",
       subheading: "Inspiration",
       heading: "Fuel your creativity.",
       content:
-        "Fuel your creativity with fresh ideas and endless possibilities.",
-      learnMoreText: "Get Inspired", // Dynamic text
-      learnMoreLink: "/inspiration",
-      linkcontent: "Hr",
+        "For more details, insights, and to explore my projects, check out my portfolio and see how I bring ideas to life through innovative solutions.",
+      learnMoreText: "Check out My Portfolio",
+      learnMoreLink: "https://harshag.vercel.app/",
+      linkcontent: "My Porfolio",
     },
   ];
 
@@ -171,7 +185,7 @@ const ImageWrapper = styled(motion.div)`
 const Overlay = styled(motion.div)`
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
 `;
 
 const OverlayCopy = ({ subheading, heading }) => {
@@ -244,7 +258,7 @@ const ExampleContent = ({
     <HeadingWrapper>{learnMoreText}</HeadingWrapper>
     <ContentText>
       <p>{content}</p>
-      <ActionButton to={learnMoreLink} target="_blank">
+      <ActionButton to={learnMoreLink}>
         {linkcontent} <FiArrowUpRight />
       </ActionButton>
     </ContentText>
