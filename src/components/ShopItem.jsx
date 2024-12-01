@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import { StyledAnimatedButton } from '../styles/StyledButton';
-import { StyledDivider } from '../styles/Table/StyledDivider';
-import { StyledStack } from '../styles/Layout/StyledStack';
+import { useState } from "react";
+import styled from "styled-components";
+import { StyledAnimatedButton } from "../styles/StyledButton";
+import { StyledDivider } from "../styles/Table/StyledDivider";
+import { StyledStack } from "../styles/Layout/StyledStack";
 
 const Container = styled.div`
   text-align: center;
@@ -30,7 +30,7 @@ const StyledImage = styled.img`
   object-fit: cover;
   border-radius: 3px;
 
-  @media (min-width: ${(props) => props.theme.breakpointM || '850px'}) {
+  @media (min-width: ${(props) => props.theme.breakpointM || "850px"}) {
     width: 250px;
     height: 250px;
   }
@@ -51,7 +51,7 @@ export function ShopItem({ item, handleClick, cart }) {
         <h2>{item.name}</h2>
         <h3>{item.description}</h3>
         <StyledDivider width="2rem" margin=".5rem" />
-        <p>${item.price} CAD</p>
+        <p>₹{item.price} INR</p>
         <StyledAnimatedButton onClick={handleClick}>
           Add to Cart
         </StyledAnimatedButton>

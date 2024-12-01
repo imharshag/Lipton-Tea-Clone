@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Backdrop = styled(motion.div)`
   width: 100vw;
@@ -76,9 +76,9 @@ export function ThanksMessage({ hideMsg }) {
       opacity: 0,
     },
     visible: {
-      y: '-10px',
+      y: "-10px",
       opacity: 1,
-      transition: { delay: 0.1, type: 'spring', stiffness: 110 },
+      transition: { delay: 0.1, type: "spring", stiffness: 110 },
     },
     exit: {
       opacity: 0,
@@ -100,15 +100,12 @@ export function ThanksMessage({ hideMsg }) {
         <h3>Thanks for shopping!</h3>
 
         <p>
-          This isn't a real store, but you can check out the{' '}
-          <a href="https://themes.shopify.com/themes/foodie/styles/grind">
-            real Shopify theme
-          </a>{' '}
-          I used as design inspiration.
+          This isn't a real store, but you can check out the I used as design
+          inspiration.
         </p>
 
         <p>
-          Visit <a href="https://www.github.com/kathyavini">my github</a> to see
+          Visit <a href="https://www.github.com/imharshag">my github</a> to see
           more things I've made <Icon className="material-icons">favorite</Icon>
         </p>
       </Message>

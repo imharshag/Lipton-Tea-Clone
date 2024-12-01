@@ -1,43 +1,50 @@
 :root {
-    --main: #303030;
-    --secondary: #404040;
-    --contrast: #3b5442;
-    --secondaryContrast: #ece2cc;
-    --tertiaryContrast: #745d4a;
-    --background: #faf4e8;
-    --white: white;
+  --main: #303030;
+  --secondary: #404040;
+  --contrast: #3b5442;
+  --secondaryContrast: #ece2cc;
+  --tertiaryContrast: #745d4a;
+  --background: #faf4e8;
+  --white: white;
 
-    --mainFont: 'Work Sans', sans-serif;
-    --secondaryFont: 'Playfair Display', serif;
+  --mainFont: "Work Sans", sans-serif;
+  --secondaryFont: "Playfair Display", serif;
 
-    --breakpoint: 650px;
-    --breakpointM: 850px;
-    --respS: clamp(0.8rem, 0.7rem + 4vw, 1.7rem);
-    --respM: clamp(1.3rem, 0.9rem + 2vw, 2rem);
-    --respL: clamp(2rem, 1rem + 4vw, 4rem);
-    --respXL: clamp(3rem, 2rem + 4vw, 5rem);
+  --breakpoint: 650px;
+  --breakpointM: 850px;
+  --respS: clamp(0.8rem, 0.7rem + 4vw, 1.7rem);
+  --respM: clamp(1.3rem, 0.9rem + 2vw, 2rem);
+  --respL: clamp(2rem, 1rem + 4vw, 4rem);
+  --respXL: clamp(3rem, 2rem + 4vw, 5rem);
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 * {
-    /* outline: 1px solid salmon; */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  /* outline: 1px solid salmon; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body, #root, .app-container {
-    min-width: 100vw;
-    min-height: 100vh;
+html,
+body,
+#root,
+.app-container {
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 .app-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    background-color: #faf4e8;
-    position: relative;
-    font: var(--mainFont);
-    color: var(--main);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background-color: #faf4e8;
+  position: relative;
+  font: var(--mainFont);
+  color: var(--main);
 }

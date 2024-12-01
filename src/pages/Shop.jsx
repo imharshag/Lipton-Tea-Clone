@@ -1,6 +1,5 @@
-import styled from 'styled-components';
-import { ShopItem } from '../components/ShopItem';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { ShopItem } from "../components/ShopItem";
 
 const Container = styled.div`
   background-color: var(--background);
@@ -8,6 +7,8 @@ const Container = styled.div`
   text-align: center;
   display: grid;
   place-items: center;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scroll */
 `;
 
 const Content = styled.div`
@@ -17,6 +18,7 @@ const Content = styled.div`
   justify-content: center;
   column-gap: clamp(0.5rem, 4vw, 4rem);
   row-gap: clamp(1.7rem, 1.5rem + 4vw, 5rem);
+  overflow-x: hidden; /* Ensure no overflow */
 `;
 
 const Title = styled.h1`

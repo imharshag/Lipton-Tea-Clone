@@ -1,10 +1,13 @@
-import { Outlet } from 'react-router-dom';
-import { Navbar } from '../components/Navbar';
+import { Outlet, useLocation } from "react-router-dom";
+import { Navbar } from "../components/Navbar";
 
 function App({ cart }) {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
     <div className="app-container">
-      <Navbar cart={cart} />
+      {!isHomePage && <Navbar cart={cart} />}
       <Outlet />
     </div>
   );
