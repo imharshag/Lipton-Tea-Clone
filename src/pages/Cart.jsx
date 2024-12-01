@@ -1,12 +1,12 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { CartItem } from '../components/CartItem';
-import { CartTitle } from '../components/CartTitle';
-import { CartSummary } from '../components/CartSummary';
-import { ThanksMessage } from '../components/ThanksMessage';
-import { StyledButton } from '../styles/StyledButton';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { CartItem } from "../components/CartItem";
+import { CartTitle } from "../components/CartTitle";
+import { CartSummary } from "../components/CartSummary";
+import { ThanksMessage } from "../components/ThanksMessage";
+import { StyledButton } from "../styles/StyledButton";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 const Container = styled(motion.div)`
   background-color: var(--background);
