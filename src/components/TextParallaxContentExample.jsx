@@ -3,6 +3,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import Bg1 from "../assets/bg-1.jpg";
+import Bg2 from "../assets/bg-2.jpg";
+import Bg3 from "../assets/bg-3.jpg";
+import Bg4 from "../assets/bg-4.jpg";
+import Bg5 from "../assets/bg-5.jpg";
+import Bg6 from "../assets/bg-6.jpg";
 
 // Color Theme
 const theme = {
@@ -19,8 +25,7 @@ const theme = {
 export const TextParallaxContentExample = () => {
   const sections = [
     {
-      imgUrl:
-        "https://cdn.pixabay.com/photo/2018/03/01/09/51/tea-3190241_1280.jpg",
+      imgUrl: Bg1,
       subheading: "Lipton Tea",
       heading: "Enjoy the taste of the world's No.1 tea",
       content:
@@ -30,8 +35,7 @@ export const TextParallaxContentExample = () => {
       linkcontent: "Learn More",
     },
     {
-      imgUrl:
-        "https://cdn.pixabay.com/photo/2016/03/05/23/02/teacup-1239437_960_720.jpg",
+      imgUrl: Bg2,
       subheading: "Tea Store",
       heading: "Don't knock it 'til you've tried it!",
       content:
@@ -41,8 +45,7 @@ export const TextParallaxContentExample = () => {
       linkcontent: "Shop With Us",
     },
     {
-      imgUrl:
-        "https://images.pexels.com/photos/8329266/pexels-photo-8329266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imgUrl: Bg3,
       subheading: "Flavora",
       heading: "Dress for the best.",
       content:
@@ -52,8 +55,7 @@ export const TextParallaxContentExample = () => {
       linkcontent: "Discover",
     },
     {
-      imgUrl:
-        "https://images.pexels.com/photos/1298613/pexels-photo-1298613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imgUrl: Bg4,
       subheading: "Let's Go!",
       heading: "Your Perfect Brew, Just a Click Away!.",
       content:
@@ -63,8 +65,7 @@ export const TextParallaxContentExample = () => {
       linkcontent: "Check Out!",
     },
     {
-      imgUrl:
-        "https://images.pexels.com/photos/9795359/pexels-photo-9795359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      imgUrl: Bg5,
       subheading: "Innovation",
       heading: "Creating Value for All.",
       content:
@@ -74,8 +75,7 @@ export const TextParallaxContentExample = () => {
       linkcontent: "Github",
     },
     {
-      imgUrl:
-        "https://cdn.pixabay.com/photo/2017/02/24/07/54/moc-chau-tea-hills-2094184_1280.jpg",
+      imgUrl: Bg6,
       subheading: "Inspiration",
       heading: "Fuel your creativity.",
       content:
